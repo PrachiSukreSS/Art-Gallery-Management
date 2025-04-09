@@ -1,0 +1,11 @@
+@import "tailwindcss";
+/* Add this in your global styles or use Tailwind utility classes */
+.input {
+  @apply block w-full border border-gray-300 rounded-md p-2 mb-4;
+}
+.btn {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
