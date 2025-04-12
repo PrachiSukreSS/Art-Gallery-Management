@@ -16,7 +16,7 @@ const ExhibitionCard = ({ exhibition, onUpdate, onDelete }) => {
               Update
             </button>
             <button
-              onClick={() => onDelete(exhibition.id)}
+              onClick={() => onDelete(exhibition._id)}
               className="px-3 py-1 bg-red-500 text-white text-sm rounded hover:bg-red-600"
             >
               Delete
@@ -44,13 +44,13 @@ const ExhibitionCard = ({ exhibition, onUpdate, onDelete }) => {
 
 ExhibitionCard.propTypes = {
   exhibition: PropTypes.shape({
-    id: PropTypes.string,
+    _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    artworks: PropTypes.arrayOf(PropTypes.string), // optional for now
+    artworks: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
